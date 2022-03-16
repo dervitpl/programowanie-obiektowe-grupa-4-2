@@ -12,7 +12,7 @@ namespace lab_1
             Console.WriteLine(money.Value);
             Money result = money * 4;
             Console.WriteLine(result.Value);
-
+            
 
 
         }
