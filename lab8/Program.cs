@@ -14,7 +14,22 @@ namespace lab8
                 where n % 2 == 0
                 select n;
             Console.WriteLine(string.Join(", ", evenNumbers));
-            Console.WriteLine("hello world");
+            Predicate<int> intPredicate = n =>
+            {
+                Console.WriteLine("wywołanie predykatu dla " + n);
+                return n % 2 == 0;
+            };
+
+            evenNumbers =
+                from n in ints
+                where intPredicate.Invoke(n)
+                select n;
+            evenNumbers =
+                from n in evenNumbers
+                where n > 5
+                select n;
+            Console.WriteLine("wywołanie ewaluacji wyrażenia LINQ");
+            Console.WriteLine(string.Join(", ", evenNumbers));
         }
     }
 }
