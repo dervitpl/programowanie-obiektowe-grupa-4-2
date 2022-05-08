@@ -6,4 +6,8 @@
     <RootNamespace>lab4_zalegle</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="C:\Users\PC\Desktop\Program.cs" Link="Program.cs" />
+  </ItemGroup>
+
 </Project>
