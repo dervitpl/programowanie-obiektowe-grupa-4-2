@@ -4,7 +4,7 @@ using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Linq;
 
-class App:Exercise2
+class App : Exercise2
 {
     public static void Main(string[] args)
     {
@@ -88,7 +88,9 @@ class Exercise1
         else if (direction == Direction4.LEFT && x == 0 && x >= size1 && y >= size2)
         {
             return Point;
-        }else if(direction == Direction4.RIGHT &&x>= size1){
+        }
+        else if (direction == Direction4.RIGHT && x >= size1)
+        {
             return Point;
         }
         else if (direction == Direction4.DOWN && y >= size2)
@@ -97,25 +99,25 @@ class Exercise1
         }
         else
         {
-           switch(direction)
+            switch (direction)
             {
                 case Direction4.UP:
                     return Point = (x, y - 1);
-            
+
                 case Direction4.DOWN:
-                    return Point = (x, y+1);
-            
+                    return Point = (x, y + 1);
+
                 case Direction4.LEFT:
-                    return Point = (x-1, y);
-            
+                    return Point = (x - 1, y);
+
                 case Direction4.RIGHT:
-                    return Point = (x+1, y);
-            
+                    return Point = (x + 1, y);
+
                 default:
                     return Point;
-                   
-        }
-            
+
+            }
+
         }
     }
 }
@@ -155,23 +157,24 @@ class Exercise2
         {
             for (int z = 0; z < y; z++)
             {
-                if (value == screen[i,z])
+                if (value == screen[i, z])
                 {
-                    if (y-1 == z && x == i)
+                    if (y - 1 == z && x == i)
                     {
                         Console.WriteLine("UP");
                         return Direction8.UP;
-                    }else if(y-1==z && x + 1 == i)
+                    }
+                    else if (y - 1 == z && x + 1 == i)
                     {
                         Console.WriteLine("UP_RIGHT");
                         return Direction8.UP_RIGHT;
                     }
-                    else if (y== z && x + 1 == i)
+                    else if (y == z && x + 1 == i)
                     {
                         Console.WriteLine("RIGHT");
                         return Direction8.RIGHT;
                     }
-                    else if (y+1 == z && x + 1 == i)
+                    else if (y + 1 == z && x + 1 == i)
                     {
                         Console.WriteLine("DOWN_RIGHT");
                         return Direction8.DOWN_RIGHT;
@@ -196,7 +199,8 @@ class Exercise2
                         Console.WriteLine("UP_LEFT");
                         return Direction8.UP_LEFT;
                     }
-                    else {
+                    else
+                    {
                         return 0;
                     }
                 }
@@ -204,7 +208,7 @@ class Exercise2
         }
         Console.WriteLine("UP");
         return Direction8.UP;
-        
+
     }
 }
 
@@ -272,8 +276,8 @@ class Exercise4
             if (Group == "A")
             {
                 A++;
-                if (A <= 9 && A>=0)
-                { 
+                if (A <= 9 && A >= 0)
+                {
                     //student.StudentId = $"{student.Group}00{count}";
                     Console.WriteLine($"{student.LastName} {student.FirstName} '{student.Group}' - '{student.Group}00{A}'");
                 }
@@ -289,7 +293,7 @@ class Exercise4
             else if (Group == "B")
             {
                 B++;
-                if (B <= 9 && B>=0)
+                if (B <= 9 && B >= 0)
                 {
                     Console.WriteLine($"{student.LastName} {student.FirstName} '{student.Group}' - '{student.Group}00{B}'");
                 }
