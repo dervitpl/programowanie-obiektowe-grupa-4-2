@@ -16,6 +16,7 @@
     <Content Include="Fonts\pricedown bl.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <Resource Include="Images\PngSplashWeather.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

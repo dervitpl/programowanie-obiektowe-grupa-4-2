@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Newtonsoft.Json;
+using System.Net;
 
 namespace Pogodynka
 {
@@ -23,6 +25,22 @@ namespace Pogodynka
         public DashBoard()
         {
             InitializeComponent();
+        }
+
+        string APIKey = "c599fe69d63596c49356a4ec0502276d";
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        void getWeather()
+        {
+            using (WebClient web = new WebClient())
+            {
+                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}",TBCity.Text, APIKey );
+                var json = web.DownloadString(url);
+                Pogodynka.nest pogodynkaInfo = JsonConvert.DeserializeObject < Pogodynka.nest>(json);
+                
+            }
         }
     }
 }
