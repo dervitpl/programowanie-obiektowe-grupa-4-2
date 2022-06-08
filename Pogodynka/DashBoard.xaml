@@ -88,7 +88,7 @@
             <TextBox Grid.Row="1"
                      Grid.Column="0"
                      Height="30"
-                     Width="100"
+                     Width="200"
                      VerticalAlignment="Top"
                      HorizontalAlignment="Left"
                      Margin="10,10,0,0"
@@ -97,11 +97,12 @@
                      BorderBrush="Transparent"
                      Text="Condition"
                      FontSize="20"
+                     Name="txtCondition"
                 />
             <TextBox Grid.Row="1"
                      Grid.Column="0"
                      Height="30"
-                     Width="100"
+                     Width="200"
                      VerticalAlignment="Top"
                      HorizontalAlignment="Left"
                      Margin="10,110,0,10"
@@ -110,6 +111,7 @@
                      BorderBrush="Transparent"
                      Text="Details"
                      FontSize="20"
+                     Name="txtDetails"
                 />
             <TextBox Grid.Row="1"
                      Grid.Column="0"
@@ -137,8 +139,8 @@
                      FontSize="20"
                      Text="Sunset"
                 />
-            
-            
+
+
             <TextBox Grid.Row="1"
                      Grid.Column="0"
                      Height="30"
@@ -173,7 +175,7 @@
                      Width="110"
                      VerticalAlignment="Top"
                      HorizontalAlignment="Left"
-                     Margin="10,10,0,100"
+                     Margin="10,40,0,100"
                      Foreground="White"
                      Background="Transparent"
                      BorderBrush="Transparent"
@@ -202,7 +204,7 @@
                      Width="100"
                      VerticalAlignment="Top"
                      HorizontalAlignment="Left"
-                     Margin="150,10,0,100"
+                     Margin="150,40,0,100"
                      Foreground="White"
                      Background="Transparent"
                      BorderBrush="Transparent"
@@ -225,7 +227,36 @@
                      Name="txtPressure"
                      
                 />
-            <Image Name="picIcon" Stretch="Fill" 
+            <WrapPanel  Width="300" Height="300" Grid.Row="1" Grid.Column="1" Name="wrappanel1">
+            </WrapPanel>
+            <Button Name="BtnSave" Height="50" Grid.Column="2" Grid.Row="1" Click="BtnSave_Click" FontSize="30" FontWeight="Bold" Foreground="White" Background="#FFB65757" Margin="42,150,48,150">Save to file</Button>
+            <TextBox Grid.Column="2"
+                     Grid.Row="0"
+                     Height="30"
+                     Width="105"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     Margin="150,180,0,0"
+                     Foreground="White"
+                     Background="Transparent"
+                     BorderBrush="Transparent"
+                     FontSize="20"
+                     Text="N/A"
+                     Name="txtTemp"
+                     
+                />
+            <TextBox Grid.Column="2"
+                     Grid.Row="0"
+                     Height="30"
+                     Width="135"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     Margin="10,180,0,0"
+                     Foreground="White"
+                     Background="Transparent"
+                     BorderBrush="Transparent"
+                     FontSize="20"
+                     Text="Temperature"
                 />
         </Grid>
     </Border>
